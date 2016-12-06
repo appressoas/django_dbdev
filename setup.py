@@ -21,7 +21,7 @@ setup(
     description = 'Makes it easy to create and manage databases during development.',
     license='BSD',
     version = __version__,
-    url = 'http://github.com/espenak/django_dbdev',
+    url = 'http://github.com/appressoas/django_dbdev',
     author = 'Espen Angell Kristiansen',
     author_email='post@espenak.net',
     long_description=long_description,
