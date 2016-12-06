@@ -56,6 +56,19 @@ Add the following to your Django settings::
     the name of the directory (mysql instead of mariadb).
 
 
+****************************
+Avoiding port-number-crashes
+****************************
+If you are developing multiple projects simultaneously, or just have 
+a lot of stuff running on various ports and want to avoid a crash, 
+you can specify the port for dbdev by adding this line below ``DATABASES``
+in ``settings.py``::
+
+    DATABASES['default']['PORT'] = <my_random_port_number>
+    
+where `my_random_port_number` is the port you want your dbdev-database to 
+run on. We recommend using a port somewhere in the range 20.000-50.000.
+
 
 *****************************************
 Developing for multiple database backends
