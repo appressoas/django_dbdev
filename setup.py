@@ -17,17 +17,17 @@ See https://github.com/espenak/django_dbdev
 """
 
 setup(
-    name = 'django_dbdev',
-    description = 'Makes it easy to create and manage databases during development.',
+    name='django_dbdev',
+    description='Makes it easy to create and manage databases during development.',
     license='BSD',
-    version = __version__,
-    url = 'http://github.com/appressoas/django_dbdev',
-    author = 'Espen Angell Kristiansen',
+    version=__version__,
+    url='http://github.com/appressoas/django_dbdev',
+    author='Espen Angell Kristiansen',
     author_email='post@espenak.net',
     long_description=long_description,
     packages=find_packages(exclude=['dbdev_testproject']),
-    install_requires = [
-        'Django',
+    install_requires=[
+        'Django>=1.10',
         'sh',
         'future'
     ],

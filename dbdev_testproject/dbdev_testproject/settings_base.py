@@ -22,7 +22,25 @@ SECRET_KEY = 'x8v^c*ynz_62pd1h^bxxm8ym3a_*i6cpsl#s+ji!-4bnvu_sjx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'debug': True,
+            'context_processors': [
+                "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
+                "django.template.context_processors.static",
+                "django.template.context_processors.tz",
+                "django.contrib.messages.context_processors.messages",
+                "django.template.context_processors.request",
+            ],
+        },
+    },
+]
 
 ALLOWED_HOSTS = []
 
@@ -38,7 +56,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -48,8 +67,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'dbdev_testproject.urls'
-
-WSGI_APPLICATION = 'dbdev_testproject.wsgi.application'
 
 
 # Database
@@ -80,3 +97,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ALLOWED_HOSTS = ['*']
