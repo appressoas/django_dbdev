@@ -71,4 +71,4 @@ Release a new version
 
 - Update ``django_dbdev/version.json``
 - ``python setup.py sdist``
-- ``twine upload dist/django-dbdev-<version>.tar.gz``
+- ``twine upload dist/django-dbdev-<version>.tar.gz``  (you may need to do ``pip install twine``)
