@@ -1,11 +1,10 @@
-import sys
+import json
+import os
+
 from setuptools import setup, find_packages
 
-
-if sys.version_info[0] == 2:
-    execfile('django_dbdev/version.py')
-else:
-    exec(open('django_dbdev/version.py', 'r').read())
+with open(os.path.join(os.path.dirname(__file__), 'ievv_opensource', 'version.json')) as f:
+    version = json.loads(f.read())
 
 
 long_description = """
@@ -20,7 +19,7 @@ setup(
     name='django_dbdev',
     description='Makes it easy to create and manage databases during development.',
     license='BSD',
-    version=__version__,
+    version=version,
     url='http://github.com/appressoas/django_dbdev',
     author='Espen Angell Kristiansen',
     author_email='post@espenak.net',
