@@ -63,3 +63,12 @@ Submit a patch
 .. _PIP: https://pip.pypa.io
 .. _VirtualEnv: https://virtualenv.pypa.io
 .. _virtualenvwrapper: http://virtualenvwrapper.readthedocs.org/
+
+
+*********************
+Release a new version
+*********************
+
+- Update ``django_dbdev/version.json``
+- ``python setup.py sdist``
+- ``twine upload dist/django-dbdev-<version>.tar.gz``

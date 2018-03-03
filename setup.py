@@ -16,7 +16,7 @@ See https://github.com/espenak/django_dbdev
 """
 
 setup(
-    name='django_dbdev',
+    name='django-dbdev',
     description='Makes it easy to create and manage databases during development.',
     license='BSD',
     version=version,
