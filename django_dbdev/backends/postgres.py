@@ -3,7 +3,6 @@ import os.path
 from builtins import str
 from sh import Command
 from sh import ErrorReturnCode
-from django.conf import settings
 
 from .base import BaseDbdevBackend
 
@@ -19,6 +18,7 @@ DBSETTINGS = {
 
 class PostgresBackend(BaseDbdevBackend):
     def __init__(self, command):
+        from django.conf import settings
         super(PostgresBackend, self).__init__(command)
         postgres_executable = getattr(settings, 'DBDEV_POSTGRES_EXECUTABLE', 'postgres')
         pg_ctl_executable = getattr(settings, 'DBDEV_POSTGRES_PG_CTL_EXECUTABLE', 'pg_ctl')

@@ -23,6 +23,7 @@ We provide Django management commands to:
 Supported databases
 ===================
 - PostgreSQL
+- Sqlite3
 - MySQL
 - MariaDB (same backend as MySQL)
 

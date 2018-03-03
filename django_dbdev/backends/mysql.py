@@ -5,7 +5,6 @@ from time import sleep
 import os
 from sh import Command
 from sh import ErrorReturnCode
-from django.conf import settings
 
 from .base import BaseDbdevBackend
 
@@ -22,6 +21,7 @@ DBSETTINGS = {
 
 class MySqlBackend(BaseDbdevBackend):
     def __init__(self, command):
+        from django.conf import settings
         super(MySqlBackend, self).__init__(command)
         mysql_install_db_executable = getattr(settings, 'DBDEV_MYSQL_INSTALL_DB_EXECUTABLE',
             'mysql_install_db')

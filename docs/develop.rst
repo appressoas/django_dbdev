@@ -42,6 +42,10 @@ Test with postgres using::
 
     $ DJANGO_SETTINGS_MODULE=dbdev_testproject.develop.settings.postgres python manage.py
 
+Test with sqlite using::
+
+    $ DJANGO_SETTINGS_MODULE=dbdev_testproject.develop.settings.sqlite python manage.py
+
 Test with mysql using::
 
     $ DJANGO_SETTINGS_MODULE=dbdev_testproject.develop.settings.mysql python manage.py

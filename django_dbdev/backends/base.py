@@ -23,6 +23,10 @@ class BaseDbdevBackend(object):
     def dbsettings(self):
         return settings.DATABASES['default']
 
+    @property
+    def dbname(self):
+        return self.dbsettings['NAME']
+
     def sh_stdout_handler(self, data):
         return self.stdout.write(data)
 

@@ -1,6 +1,6 @@
 from django_dbdev.backends.sqlite import DBSETTINGS
 
-from .base import *
+from .base import *  # noqa
 
 
 DATABASES = {

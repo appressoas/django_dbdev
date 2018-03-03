@@ -28,6 +28,17 @@ Add the following to your Django settings::
     }
 
 
+Setup for sqlite3
+=================
+Add the following to your Django settings::
+
+    from django_dbdev.backends.sqlite import DBSETTINGS
+
+    DATABASES = {
+        'default': DBSETTINGS
+    }
+
+
 Setup for MySQL
 ===============
 Add the following to your Django settings::
