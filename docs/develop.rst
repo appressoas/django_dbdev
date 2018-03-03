@@ -70,5 +70,7 @@ Release a new version
 *********************
 
 - Update ``django_dbdev/version.json``
+- Git commit the release with message ``Release <version>``.
+- Git tag the release with ``<version>``.
 - ``python setup.py sdist``
 - ``twine upload dist/django-dbdev-<version>.tar.gz``  (you may need to do ``pip install twine``)
