@@ -11,9 +11,9 @@ To setup an isolated database environment with a development database and user i
 
     $ python manage.py dbdev_init
 
-After running this, you should be able to initialize the database using ``syncdb``::
+After running this, you should be able to initialize the database using ``migrate``::
 
-    $ python manage.py syncdb
+    $ python manage.py migrate
 
 .. note::
 
