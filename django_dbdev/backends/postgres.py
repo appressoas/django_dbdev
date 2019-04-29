@@ -65,6 +65,7 @@ class PostgresBackend(BaseDbdevBackend):
             no_privileges=True,
             no_acl=True,
             no_owner=True,
+            clean=True,
             **common_command_kwargs)
 
     def _create_user(self):
