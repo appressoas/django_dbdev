@@ -75,13 +75,17 @@ class PostgresBackend(BaseDbdevBackend):
     def _create_database(self):
         self.createdb(self.dbsettings['NAME'], owner=self.dbsettings['USER'])
 
+    @property
+    def posgres_initdb_options(self):
+        return '-E=utf-8 --locale=en_US.UTF-8'
+
     def init(self):
         if os.path.exists(self.datadir):
             self.stderr.write('The data directory ({}) already exists.'.format(self.datadir))
             raise SystemExit()
         else:
             self.create_datadir_if_not_exists()
-            self.pg_ctl('init', '-D', self.datadir)
+            self.pg_ctl('init', '-D', self.datadir, '-o', self.posgres_initdb_options)
             self.start_database_server()
             self._create_user()
             self._create_database()
